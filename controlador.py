@@ -6,7 +6,8 @@ import time
 def validar_cartao(cartao, senha):
     # Combinar matrícula e data do dia para validar o cartão
     matricula = cartao[:4][::-1] # Inverter os 4 primeiros dígitos da matrícula
-    data = input("Digite a data de hoje (no formato dd/mm/yyyy): ")
+    # pegando a data do dia
+    data = time.strftime('%d%m%Y')
     # validacao da senha
     validacao = matricula + data
     # Validar a senha usando a validação
